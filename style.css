@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 16px;
+}
+.container{
+    width: 100%;
+    max-width:500px;
+    text-align:center;
+
+}
+h1{
+    font-size: large;
+    text-decoration:underline;
+    margin-bottom: 8px;
+}
+
+.sutitle{
+    color:burlywood;
+    font-size: medium;
+    margin-bottom: 24px;
+}
+
+#board{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    gap: 5px;
+    margin: 0 auto 24px;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 5/6 ;
+
+
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px;
+
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    text-transform: uppercase;
+    background:rgb(45, 19, 138);
+    border: 2px solid red;
+    color: rgb(255, 255, 255);
+    aspect-ratio: 1/1;
+    transition: transform 0.3s ease,background 0.3s ease, border 0.3s ease;
+    user-select: none;
+}
+
+.title.pop{
+    animation: pop 0.1s ease;
+}
+@keyframes pop{
+    0% { transform: scale(1);}
+    50%{ transform: scale(1.12);}
+    100%{ transform: scale(1);}
+    
+}
+
+.title.flip{
+    animation: flip 0.4s ease forwards;
+}
+
+@keyframes flip{
+    0% { transform: rotateX(0deg);}
+    50% { transform: rotateX(90deg);}
+    100%{ transform: rotateX(0deg);}
+}
+
+.title.correct{
+    background: #538d4e;
+    border-color: #538d4e;
+}
+
+.title.present{
+    background: #3a3a3c;
+    border-color: #3a3a3c;
+}
+
+#keyboard{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.kb-row{
+    display: flex;
+    justify-content: center;
+    gap:4px;
+}
+.key{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    min-width: 30px;
+    padding: 0 8px;
+    background: #818384;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.15s ease;
+    user-select: none;
+    flex:1;
+}
+
