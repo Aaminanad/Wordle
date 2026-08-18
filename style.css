@@ -32,7 +32,7 @@
  }
 
 .subtitle {
- color: #d4d4d4;
+ color: #e07693;
  font-size: 1rem;
  margin-bottom: 24px;
  }
@@ -94,8 +94,8 @@
  }
 
 .tile.present {
- background: #b59f3b;
- border-color: #b59f3b;
+ background: #ffd000;
+ border-color: #ffd000;
  }
 
 .tile.absent {
@@ -216,13 +216,13 @@
 .secondary{
     padding: 6px 4px;
     border-radius: 50px;
-    background-color: #f44336;
+    background-color: #ff7d74;
     color:#f0f0f0;
 }
 #newGameBtn{
     padding: 6px 4px;
     border-radius: 50px;
-    background-color: #538d4e;
-    color:#f0f0f0;
+    background-color: #7fdd77;
+    color:#6e5858;
 }
 
