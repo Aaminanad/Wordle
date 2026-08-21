@@ -25,22 +25,6 @@ Failed Screen:
 
 
 
-## Features
-
-- ✅ **6 guesses, 5-letter word** — the classic Wordle format
-- ✅ **Color-coded tile feedback**
-- ✅ **Dynamic on-screen keyboard** 
-- ✅ **Full physical keyboard support** — type letters, `Backspace` to delete, `Enter` to submit
-- ✅ **Click-to-play on-screen keyboard** for touch/mouse users
-- ✅ **Word validation** — guesses must be real 5-letter words from the built-in word list; invalid guesses are rejected with an on-screen message instead of wasting a turn
-- ✅ **Win/lose detection** with clear end-of-game messaging (including reveal of the answer if you lose)
-- ✅ **"New Game" button** to reset the board and pick a new random word at any time
-- ✅ **"Give Up" button** to reveal the answer and end the current round early
-- ✅ **Smooth animations** — a subtle "pop" effect while typing and a "flip" reveal animation when tiles are scored
-- ✅ **Responsive layout** — scales down cleanly for smaller/mobile screens
-- ✅ **~500-word curated word bank**, filtered defensively so the game can never select an invalid (non-5-letter) word as the solution
-
----
 
 ## How to Play
 
@@ -55,20 +39,6 @@ Failed Screen:
 6. You have **6 attempts** to guess the word correctly.
 7. Click **New Game** anytime to start over with a fresh word, or **Give Up** to reveal the answer.
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Structure | HTML5 |
-| Styling | CSS3 (Flexbox, CSS Grid, keyframe animations) |
-| Logic | Vanilla JavaScript (ES6+, no frameworks or libraries) |
-| Fonts | System font stack (Segoe UI, Tahoma, Geneva, Verdana) |
-
-No build tools, bundlers, or package managers are required — this is a static site that runs directly in the browser.
-
----
 
 ## Project Structure
 
