@@ -71,9 +71,9 @@ Open the guthubpages site linked in description.
 6. Give up:
    By clicking the give up button you reveal the guess word!
 
- 7.New Game:
+7.New Game:
    New game button starts the new game with a new secret word.
----
+
 
 ## Contributing
 
