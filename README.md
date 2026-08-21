@@ -89,7 +89,3 @@ This is a personal/learning project, but suggestions and improvements are welcom
 
 This project is free to use, modify, and distribute for personal or educational purposes
 
-## Acknowledgments
-
-- Inspired by the original **Wordle**, created by Josh Wardle and later acquired by The New York Times
-- Built as a hands-on project to practice DOM manipulation, event handling, and core JavaScript game-logic algorithms without relying on external frameworks
