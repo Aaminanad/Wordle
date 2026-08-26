@@ -2,21 +2,19 @@ let WORDS=[];
 
 fetch('words.txt')
 .then(response =>{
-  if ( !response.ok) throw new Error('failed to load words.txt');
+  if (!response.ok) throw new Error('failed to load words.txt');
   return response.text();
 })
 .then(text =>{
-  WORDS = text.split('\n').map( w => w.trim().toUpperCase()).filter((w) => w.length === 5)
-  initGame();
+  WORDS = text.split('\n').map(w => w.trim().toUpperCase()).filter((w) => w.length === 5)
+  startNewGame();   // fixed: was "initGame()", which didn't exist
 })
-.catch( error=> console.error('Word loading error:', error))
+.catch(error => console.error('Word loading error:', error))
 
 
 
 
 
-
-//.filter((w) => w.length === 5);
 
 let solution = '';
 let guesses = [];
@@ -193,8 +191,10 @@ document.addEventListener('keydown', (e) => {
   if (gameOver) return;
   const key = e.key.toUpperCase();
   if (key === 'ENTER') {
+    e.preventDefault();      // stop Enter from also clicking a focused button
     handleKeyClick('Enter');
   } else if (key === 'BACKSPACE') {
+    e.preventDefault();      // optional, but prevents page from navigating back on some browsers
     handleKeyClick('Backspace');
   } else if (/^[A-Z]$/.test(key)) {
     handleKeyClick(key);
@@ -211,11 +211,16 @@ function startNewGame() {
   buildKeyboard();
 }
 
-NEW_GAME_BTN.addEventListener('click', startNewGame);
+NEW_GAME_BTN.addEventListener('click', () => {
+  startNewGame();
+  NEW_GAME_BTN.blur();
+});
+
 GIVE_UP_BTN.addEventListener('click', () => {
   if (gameOver) return;
   gameOver = true;
   showMessage(`The word was ${solution}`, 'error');
+  GIVE_UP_BTN.blur();
 });
 
-startNewGame();
+//startNewGame();
